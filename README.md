@@ -1,5 +1,3 @@
-# package-tracking-app
-
 # Package Tracking App
 
 A personal package tracking application designed to automatically organize online orders and deliveries from multiple retailers and carriers.
