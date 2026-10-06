@@ -18,13 +18,15 @@ Initial MVP flow:
 
 1. User creates an account.
 2. User logs into the application.
-3. User connects a Gmail account.
+3. User connects a supported email account.
 4. The application identifies relevant order or shipping emails.
 5. Relevant information is extracted.
 6. A package is automatically created or updated.
 7. The package appears on the user's dashboard.
 
-Gmail will be the first supported email provider. Support for iCloud Mail is planned for a later version.
+Gmail and Microsoft Outlook/Hotmail will be the initial supported email providers.
+
+Support for iCloud Mail is planned for a later version.
 
 ---
 
@@ -42,15 +44,20 @@ The system shall allow registered users to securely log in and log out.
 
 The system shall ensure that users can access only their own account, connected inboxes, orders, and shipment information.
 
-### FR-04 — Gmail Connection
+### FR-04 — Email Account Connection
 
-The system shall allow an authenticated user to connect a Gmail account through Google authorization.
+The system shall allow an authenticated user to connect a supported email account through the provider's authorization system.
+
+The initial supported providers shall be:
+
+- Gmail
+- Microsoft Outlook/Hotmail
 
 ### FR-05 — Multiple Email Accounts
 
 The system shall support associating multiple email accounts with one application account.
 
-For the MVP, the supported provider may initially be limited to Gmail.
+For the MVP, supported email providers shall be limited to Gmail and Microsoft Outlook/Hotmail.
 
 ### FR-06 — Email Detection
 
@@ -120,9 +127,11 @@ Normal package tracking should require little or no manual data entry.
 
 The application will follow an automation-first approach, with manual input used only when necessary.
 
-### NFR-05 — Responsive Design
+### NFR-05 — iOS User Experience
 
-The application should provide a usable experience on both desktop and mobile devices.
+The application shall provide a native iOS experience optimized primarily for iPhone devices.
+
+The user interface shall follow standard iOS interaction patterns and remain usable across supported iPhone screen sizes.
 
 ### NFR-06 — Maintainability
 
@@ -135,13 +144,15 @@ Retailer-specific email processing logic should be modular so that support for a
 The following features are not part of the initial MVP:
 
 - iCloud / Me.com email integration
+- Android application
+- Web application
+- iPad-specific interface
 - Automatic carrier API tracking
 - Push notifications
 - Package sharing
 - Household or shared accounts
 - AI-based email parsing
 - Support for every retailer
-- Native iOS or Android applications
 - Advanced delivery analytics
 
 These features may be considered for future versions.
